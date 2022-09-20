@@ -1,9 +1,7 @@
-import { FC } from "react";
-
 import { useComponents } from "../../components";
 import { useViews } from "../../views";
 
-export const Home: FC = () => {
+export const Home = () => {
   const { NavBar } = useComponents();
   const { TopTracks } = useViews();
 

@@ -1,10 +1,9 @@
-import { FC } from "react";
 import { useComponents } from "../../components";
 import { useControllers } from "../../controllers";
 import type { Track } from "../../interfaces";
 import { Slider } from "@mui/material";
 
-export const TopTracks: FC = () => {
+export const TopTracks = () => {
   const { useScreenHooks, useGeneralHooks } = useControllers();
   const { useTopTracks } = useScreenHooks();
   const { handleChange, tracks, term } = useTopTracks();

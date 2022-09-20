@@ -8,7 +8,7 @@ export const useTopTracks = () => {
   const [term, setTerm] = useState<number | number[]>(1);
 
   const handleChange = (
-    ev: SyntheticEvent | Event,
+    ev: SyntheticEvent | Event | undefined,
     value: number | number[]
   ): void => {
     setTerm(value);
@@ -50,7 +50,7 @@ export const useTopTracks = () => {
   };
 
   useEffect(() => {
-    handleChange(() => {}, 1);
+    handleChange(undefined, 1);
   }, []);
 
   return { handleChange, tracks, term };
