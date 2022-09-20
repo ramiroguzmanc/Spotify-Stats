@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 300;
+        font-style: normal;
+        src: url("/fonts/CircularSpotifyTxT-Light.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-Light.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 300;
+        font-style: italic;
+        src: url("/fonts/CircularSpotifyTxT-LightItalic.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-LightItalic.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 400;
+        font-style: normal;
+        src: url("/fonts/CircularSpotifyTxT-Book.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-Book.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 400;
+        font-style: italic;
+        src: url("/fonts/CircularSpotifyTxT-BookItalic.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-BookItalic.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 500;
+        font-style: italic;
+        src: url("/fonts/CircularSpotifyTxT-Medium.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-Medium.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 500;
+        font-style: italic;
+        src: url("/fonts/CircularSpotifyTxT-MediumItalic.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-MediumItalic.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 700;
+        font-style: normal;
+        src: url("/fonts/CircularSpotifyTxT-Bold.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-Bold.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 700;
+        font-style: italic;
+        src: url("/fonts/CircularSpotifyTxT-BoldItalic.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-BoldItalic.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 900;
+        font-style: normal;
+        src: url("/fonts/CircularSpotifyTxT-Black.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-Black.woff") format("woff");
+    }
+    @font-face {
+        font-family: "CircularSP";
+        font-weight: 900;
+        font-style: italic;
+        src: url("/fonts/CircularSpotifyTxT-BlackItalic.woff2") format("woff2"), url("/fonts/CircularSpotifyTxT-BlackItalic.woff") format("woff");
+    }
+   
+}
