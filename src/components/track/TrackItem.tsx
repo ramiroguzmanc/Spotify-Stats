@@ -1,5 +1,4 @@
-import { FC } from "react";
-import { useGeneralHooks } from "../../controllers/generalHooks";
+import { useControllers } from "../../controllers";
 import type { Track } from "../../interfaces";
 
 type TrackItemProps = {
@@ -9,21 +8,24 @@ type TrackItemProps = {
   handleSound: (url: string, trackID: string) => void;
 };
 
-export const TrackItem: FC<TrackItemProps> = ({
+export const TrackItem = ({
   track,
   idx,
   nowPlaying,
   handleSound,
-}) => {
+}: TrackItemProps) => {
+  const { useGeneralHooks, useComponentHooks } = useControllers();
   const { msToMinsAndSecs } = useGeneralHooks();
+  const { useTrackItem } = useComponentHooks();
+  const { artitsToString } = useTrackItem();
 
   return (
     <div
-      className="rounded flex justify-between items-center mx-auto p-1 w-6/12 cursor-pointer hover:bg-opacity-5 hover:bg-white"
+      className="rounded flex justify-between items-center mx-auto p-1 cursor-pointer hover:bg-opacity-5 hover:bg-white w-10/12 max-w-xl"
       key={track.id}
       onClick={() => handleSound(track.preview_url, track.id)}
     >
-      <div className="flex items-center">
+      <div className="flex items-center w-full">
         <div className="w-10 flex justify-center items-center">
           <p
             className={`${
@@ -38,7 +40,7 @@ export const TrackItem: FC<TrackItemProps> = ({
           alt={track.name}
           className="w-16 h-16"
         />
-        <div className="ml-3">
+        <div className="ml-3 w-full">
           <p
             className={`font-bold ${
               nowPlaying === track.id ? "text-green" : "text-white"
@@ -46,13 +48,8 @@ export const TrackItem: FC<TrackItemProps> = ({
           >
             {track.name}
           </p>
-          <div className="flex">
-            {track.artists.map((artist, indx, artists) => (
-              <span className="text-gray" key={artist.id}>
-                {artist.name}
-                {indx !== artists.length - 1 && ",\u00A0"}
-              </span>
-            ))}
+          <div className="flex w-full">
+            <p className="text-gray">{artitsToString(track.artists)}</p>
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import { useTrackItem } from "./TrackItem";
+
 export const useComponentHooks = () => {
-  return {};
+  return { useTrackItem };
 };

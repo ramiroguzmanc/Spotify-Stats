@@ -7,7 +7,7 @@ export const Home = () => {
 
   return (
     <div className="bg-Spotifyblack min-h-screen text-white flex">
-      <NavBar />
+      {/* <NavBar /> */}
       <TopTracks />
     </div>
   );
