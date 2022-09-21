@@ -9,7 +9,7 @@ export const TopTracks = () => {
   const { handleChange, tracks, term } = useTopTracks();
   const { TrackItem } = useComponents();
   const { usePlayer } = useGeneralHooks();
-  const { handleSound, nowPlaying } = usePlayer();
+  const { handleSound, nowPlaying, paused } = usePlayer();
 
   return (
     <div className="w-full">
@@ -52,6 +52,7 @@ export const TopTracks = () => {
             idx={idx}
             nowPlaying={nowPlaying}
             handleSound={handleSound}
+            paused={paused}
           />
         ))}
       </section>

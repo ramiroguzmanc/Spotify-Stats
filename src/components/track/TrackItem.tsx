@@ -1,10 +1,12 @@
 import { useControllers } from "../../controllers";
 import type { Track } from "../../interfaces";
+import { useIcons } from "../../assets/icons";
 
 type TrackItemProps = {
   track: Track;
   idx: number;
   nowPlaying: string | null;
+  paused: boolean | null;
   handleSound: (url: string, trackID: string) => void;
 };
 
@@ -13,11 +15,13 @@ export const TrackItem = ({
   idx,
   nowPlaying,
   handleSound,
+  paused,
 }: TrackItemProps) => {
   const { useGeneralHooks, useComponentHooks } = useControllers();
   const { msToMinsAndSecs } = useGeneralHooks();
   const { useTrackItem } = useComponentHooks();
   const { artitsToString } = useTrackItem();
+  const { PauseIcon, PlayIcon } = useIcons();
 
   return (
     <div
@@ -32,7 +36,15 @@ export const TrackItem = ({
               nowPlaying === track.id ? "text-green" : "text-white"
             }`}
           >
-            {idx + 1}
+            {nowPlaying === track.id ? (
+              paused ? (
+                <img src={PlayIcon} alt="Play" />
+              ) : (
+                <img src={PauseIcon} alt="Pause" />
+              )
+            ) : (
+              idx + 1
+            )}
           </p>
         </div>
         <img

@@ -3,6 +3,8 @@ import SpotifyIconGreen from "./Spotify_Icon_RGB_Green.png";
 import SpotifyIconWhite from "./Spotify_Icon_RGB_White.png";
 import MusicIcon from "./Music_Icon.svg";
 import MusicIconSolid from "./Music_Icon_Solid.svg";
+import PauseIcon from "./Pause_Icon.svg";
+import PlayIcon from "./Play_Icon.svg";
 
 export const useIcons = () => {
   return {
@@ -11,5 +13,7 @@ export const useIcons = () => {
     SpotifyIconWhite,
     MusicIcon,
     MusicIconSolid,
+    PauseIcon,
+    PlayIcon,
   };
 };
