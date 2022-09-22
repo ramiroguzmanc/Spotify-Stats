@@ -1,6 +1,4 @@
 import { Slider } from "@mui/material";
-import "./Slider.styles.css";
-
 export interface MuiSliderProps {
   handleChange: (
     ev: Event | React.SyntheticEvent,
