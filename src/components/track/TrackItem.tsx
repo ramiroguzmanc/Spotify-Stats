@@ -25,7 +25,7 @@ export const TrackItem = ({
 
   return (
     <div
-      className="rounded flex justify-between items-center mx-auto p-1 cursor-pointer hover:bg-opacity-5 hover:bg-white w-10/12 max-w-xl"
+      className="rounded flex justify-between items-center mx-auto p-1 cursor-pointer w-10/12 max-w-xl md:hover:bg-opacity-5 md:hover:bg-white"
       key={track.id}
       onClick={() => handleSound(track.preview_url, track.id)}
     >
