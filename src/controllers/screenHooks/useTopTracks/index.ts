@@ -13,12 +13,12 @@ export const useTopTracks = () => {
   ): void => {
     setTerm(value);
 
-    const time_range = {
+    const time_range: { [index: number]: string } = {
       1: "short_term",
       2: "medium_term",
       3: "long_term",
     };
-
+    //@ts-ignore
     getTopTracks(time_range[value]);
   };
 
