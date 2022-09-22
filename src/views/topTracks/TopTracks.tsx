@@ -1,13 +1,12 @@
 import { useComponents } from "../../components";
 import { useControllers } from "../../controllers";
 import type { Track } from "../../interfaces";
-import { Slider } from "@mui/material";
 
 export const TopTracks = () => {
   const { useScreenHooks, useGeneralHooks } = useControllers();
   const { useTopTracks } = useScreenHooks();
   const { handleChange, tracks, term } = useTopTracks();
-  const { TrackItem } = useComponents();
+  const { TrackItem, MuiSlider } = useComponents();
   const { usePlayer } = useGeneralHooks();
   const { handleSound, nowPlaying, paused } = usePlayer();
 
@@ -19,31 +18,7 @@ export const TopTracks = () => {
       </section>
       <section className="pb-10">
         <div className="max-w-xl mx-auto px-4 py-4 w-10/12">
-          <Slider
-            color="primary"
-            defaultValue={1}
-            marks={[
-              { value: 1, label: "1M" },
-              { value: 2, label: "6M" },
-              { value: 3, label: "All" },
-            ]}
-            min={1}
-            max={3}
-            size={"medium"}
-            sx={{
-              width: 110,
-              "& .css-yafthl-MuiSlider-markLabel": {
-                color: "white",
-              },
-              "& .css-1eoe787-MuiSlider-markLabel": {
-                color: "white",
-              },
-            }}
-            className="mr-2"
-            track={false}
-            onChangeCommitted={(ev, value) => handleChange(ev, value)}
-            value={term}
-          />
+          <MuiSlider handleChange={handleChange} value={term} />
         </div>
         {tracks.map((track: Track, idx: number) => (
           <TrackItem
