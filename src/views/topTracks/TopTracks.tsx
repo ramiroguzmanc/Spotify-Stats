@@ -14,7 +14,10 @@ export const TopTracks = () => {
     <div className="w-full">
       <section className="py-8 pb-10 px-8 text-center from-[#363636] to-[#141414] bg-gradient-to-b">
         <h1 className="text-8xl font-bold tracking-tight mb-5">Top Tracks</h1>
-        <p>These are your top tracks based on calculated affinity.</p>
+        <p>
+          These are your top tracks based on calculated affinity. Tap on a Track
+          to show a preview.
+        </p>
       </section>
       <section className="pb-10">
         <div className="max-w-xl mx-auto px-4 py-4 w-10/12">
