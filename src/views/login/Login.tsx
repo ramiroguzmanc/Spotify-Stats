@@ -6,8 +6,19 @@ export const Login = () => {
   }`;
 
   return (
-    <a href={authUri}>
-      <div className="bg-green w-24 rounded text-white font-bold">Login</div>
-    </a>
+    <div className="bg-Spotifyblack h-screen grid place-items-center">
+      <section className="flex flex-col justify-center items-center max-w-lg">
+        <h1 className="text-white font-bold text-5xl text-center">
+          Knows what's your top 10 traks on{" "}
+          <span className="text-green">Spotify</span>?
+        </h1>
+        <a
+          className="bg-green w-4/12 rounded-full py-3 text-white font-bold mt-7 text-2xl text-center"
+          href={authUri}
+        >
+          Let's See!
+        </a>
+      </section>
+    </div>
   );
 };
